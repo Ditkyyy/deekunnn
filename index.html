@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>ດີກັນເນາະະ | SorryLove</title>
+  <meta name="description" content="เว็บเพจน่ารัก ๆ สำหรับส่งง้อคนพิเศษของคุณ" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9D%A4%EF%B8%8F%3C/text%3E%3C/svg%3E" />
+
+  <!--
+    ======================================================================
+    SorryLove Template
+    ----------------------------------------------------------------------
+    ໄຟລນີ້ຄືໂຄງໜ້າເວັບ (ໂຄງສ້າງ) ເທົ່ານັ້ນ
+    ຖ້າຕ້ອງການແກ້ໄຂເລື່ອງ "ສີ / ຟ້ອນ" ໃຫ້ໄປທີ່ໄຟລ css/style.css (ດ້ານເທິງຂອງໄຟລ)
+    ຖ້າຕ້ອງການແກ້ "ຂໍ້ຄວາມ / ຮູບ GIF / ການຂະຫຍັບຂອງປຸ່ມ" ໃຫ້ໄປທີ່ໄຟລ js/script.js (ສ່ວນ CONFIG ດ້ານເທິງຂອງໄຟລ)
+    ລາຍລະອຽດວິທີການແກ້ໄຊເທື່ອລະຂັ້ນຕອນຢູ່ໃນໄຟລ README.md
+    ======================================================================
+  -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Mali:wght@600;700&family=Prompt:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- ພື້ນຫຼັງຫົວໃຈລອຍຂື້ນ (ສ້າງດ້ວຍ JavaScript ຕອນກົດ "ດີກັນນ") -->
+  <div class="hearts-layer" id="heartsLayer" aria-hidden="true"></div>
+
+  <main class="page">
+    <section class="card" id="card" aria-live="polite">
+      <!-- GIF ຫຼັກ: ປ່ຽນຮູບໄດ້ທີ່ assets/images/ (ແທນທີ່ໄຟລເດີມ) -->
+      <div class="gif-wrap">
+        <img
+          id="mainGif"
+          class="main-gif"
+          src="assets/images/sorry.gif"
+          alt="สติกเกอร์ง้อแฟนน่ารัก ๆ"
+          width="220"
+          height="220"
+        />
+      </div>
+
+      <!-- ຂໍ້ຕວາມຫຼັກ -->
+      <h1 class="main-message" id="mainMessage">ດີກັນນ້າາາດີ້ 🥺</h1>
+
+      <!-- ຂໍ້ຄວາມ Happy Ending (ມັນຈະສະແດງຂື້ນມາຫຼັງຈາກກົດ "ດີກັນນ ❤️") -->
+      <p class="sub-message" id="subMessage" hidden></p>
+
+      <!-- ແຖວປຸ່ມ: ປຸ່ມ "ບໍ່..ຊັງ!" ຢູ່ຟາກຊ້າຍ (ຈະສາມາດແລ່ນໜີໄດ້), ປຸ່ມ "ດີກັນນ ❤️" ຢູ່ຟາກຂວາ (ຕຳແໜ່ງຂະຢູ່ບ່ອນເກົ່າ) -->
+      <div class="button-row" id="buttonRow">
+        <button type="button" id="noBtn" class="btn btn-no">ບໍ່..ຊັງ!</button>
+        <button type="button" id="yesBtn" class="btn btn-yes">ດີກັນນ ❤️</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

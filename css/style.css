@@ -1,0 +1,406 @@
+/* ============================================================
+   SorryLove Template — style.css
+   ============================================================
+   ວິທີແກ້ງ່າຍໆ ສຳຫຼັບຄົນບໍ່ທະນັດຂຽນໂຄ້ດ:
+   1) ແກ້ "ສີ"   ໄດ້ທີ່ຈິວປ່ຽນໃນສ່ວນຂອງ :root ດ້ານລຸ່ມນີ້ (ຫົວຊໍ້ COLORS)
+   2) ແກ້ "ຟ້ອນ" ໄດ້ທີ່ຕົວປ່ຽນ --font-heading / --font-body
+      (ຖ້າປ່ຽນຟ້ອນແລ້ວ ຢ່າລືມໄປແກ້ລິ້ງ Google Fonts ໃນ index.html ນຳ)
+   3) ແກ້ "ຄວາມໂຄ້ງມົນ/ເງົາ" ໄດ້ທີ່ຫົວຂໍ້ SHAPE
+   ບໍ່ຈຳເປັນຕ້ອງແກ້ສ່ວນອື່ນຂອງໄຟລນີ້ເລີຍ
+   ============================================================ */
+
+/* ຟ້ອນທີ່ແນບມາກັບ project ເອງ (ບໍ່ສາມາດໂຫລດໃນ Google Fonts) — ໄຟລຢູ່ທີ່ assets/fonts/
+   ໝາຍເຫດ: ຟ້ອນນີ້ ("PB Melon") ມີສະເພາະຕົວອັກສອນລາວ + ອັງກິດ ບໍ່ມີຕົວອັກສອນໄທ
+   ຖ້າໃຊ້ຟ້ອນນີ້ກັບຂໍ້ຄວາມພາສາໄທ ຕົວອັກສອນຈະບໍ່ຂື້ນ (ຕ້ອງປ່ຽນຂໍ້ຄວາມຢູ່ໜ້າເວັບເປັນພາສາລາວນຳ) */
+@font-face {
+  font-family: "PB Melon";
+  src: url("../assets/fonts/PBMelon-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* ---------- COLORS (ແກ້ສີໄດ້ຢູ່ບ່ອນນີ້) ---------- */
+  --color-bg-top: #fff8f1;
+  --color-bg-bottom: #ffeef1;
+  --color-card-bg: #ffffff;
+
+  --color-primary: #ff8fa8;        /* ສີຫຼັກຂອງປຸ່ມ "ດີກັນນ ❤️" */
+  --color-primary-dark: #ea6d8c;   /* ສີເຂັ້ມສຳຫຼັບ hover/active */
+  --color-primary-soft: #ffe1e8;   /* ສີອ່ອນໃຂ້ເປັນພື້ນຫຼັງຈຸດໆ */
+
+  --color-secondary-bg: #ffffff;   /* ສີພື້ນຫຼັງຂອງປຸ່ມ "ບໍ່..ຊັງ!" */
+  --color-secondary-border: #f3d9de;
+  --color-secondary-text: #a98a8f;
+
+  --color-text: #4a3b3b;           /* ສີຕົວອັກສອນຫຼັກ */
+  --color-text-soft: #9b8585;      /* ສີຕົວອັກສອນຮອງ */
+
+  --color-accent-gold: #ffd9a0;    /* ສີປະກາຍ/ຫົວໃຈລອຍ */
+  --color-heart: #ff8fa8;
+
+  --color-focus-ring: #ff6f91;
+
+  /* ---------- FONTS (ແກ້ໄດ້ຢູ່ບ່ອນນີ້) ---------- */
+  /* --font-heading ໃຊ້ກັບຂໍ້ຄວາມຫົວຂໍ້ໃຫຍ່ (ເຊັ່ນ "ດີກັນເນາະແຟນນ") ຕັ້ງເປັນ PB Melon (ຟ້ອນລາວ
+     ທີ່ແນບມາເອງ) ກ່ອນ ถ้า browser ໂຫລດຟ້ອນນີ້ບໍ່ໄດ້ ຫຼື ໃຊ້ຕົວອັກສອນທີ່ຟ້ອນນີ້ບໍ່ມີ (ເຊັ່ນພາສາໄທ)
+     ມັນຈະຕັດໄປໃຊ້ຟ້ອນຖັດໄປທີ່ຮອງຮັບພາສາໄທແບບອັດຕະໂນມັດ */
+  --font-heading: "PB Melon", "Mali", "Prompt", "Noto Sans Thai", system-ui, sans-serif;
+  /* --font-body ໃຊ້ກັບປຸ່ມ ແລະ ຂໍ້ຄວາມຮອງ ໃສ່ PB Melon ໄວ້ກ່ອນຄືກັນ ເພື່ອໃຫ້ຟ້ອນດຽວກັນ
+     ທັ້ງເວັບ (ຕົວອັກສອນໄທທີ່ຍັງຫຼົງເຫຼືອຢູ່ຈະຖືກແທນທີ່ໂດຍຟ້ອນ Prompt/Noto Sans Thai ແບບອັດຕະໂນມັດ ຖ້າຫາກໜ້າເວັບນີ້ຍັງມີພາສາໄທຢູ່) */
+  --font-body: "PB Melon", "Prompt", "Noto Sans Thai", system-ui, sans-serif;
+
+  /* ---------- SHAPE / SPACING ---------- */
+  --radius-card: 28px;
+  --radius-btn: 999px;
+  --radius-gif: 20px;              /* ຄວາມໂຄ້ງມຸມຂອບ GIF (0 = ມຸມຫຼ່ຽມຄົມ, ແຫ່ງຫຼາຍແຫ່ງໂຄ້ງ) */
+  --shadow-card: 0 24px 55px -22px rgba(190, 120, 140, 0.35),
+    0 10px 24px -12px rgba(190, 120, 140, 0.28);
+  --shadow-btn-yes: 0 14px 26px -12px rgba(234, 109, 140, 0.55);
+
+  --gap-buttons: 14px;
+  --max-card-width: 430px;
+
+  /* ໄລຍະຂອບຂັ້ນຕ່ຳທີ່ປຸ່ມ "ບໍ່..ຊັງ!" ຕ້ອງຫ່າງຈາກຂອບຈໍສະເໝີ (ໃຊ້ຄຳນວນໃນ script.js ນຳ)
+     script.js ຈະບວກໄລຍະເພື່ອເພີ່ມອັດຕະໂນມັດສຳຫຼັບ animation ການດີດໂຕ (.is-wiggling) ໃຫ້ເອງຢູ່ແລ້ວ
+     ໂຕເລກນີ້ ຈື່ງເປັນແຄ່ໄລຍະຂື້ນຕ່ຳ "ພື້ນຖານ" ລ້ວນໆ ຖ້າຢາກປັບກະປັບໄດ້ */
+  --no-btn-edge-margin: 16px;
+}
+
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background: radial-gradient(
+      120% 140% at 50% -10%,
+      var(--color-bg-top) 0%,
+      var(--color-bg-bottom) 60%
+    )
+    fixed;
+  /* ກັນບໍ່ໃຫ້ເກີດ scroll ຈາກປຸ່ມທີ່ເຄື່ອນທີ່ */
+  overflow: hidden;
+  min-height: 100vh;
+  min-height: 100dvh;
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* ============================================================
+   LAYOUT
+   ============================================================ */
+.page {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+}
+
+.card {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: var(--max-card-width);
+  background: var(--color-card-bg);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  padding: clamp(28px, 6vw, 44px) clamp(20px, 6vw, 36px) clamp(32px, 6vw, 40px);
+  text-align: center;
+  animation: card-in 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes card-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ============================================================
+   GIF
+   ============================================================ */
+.gif-wrap {
+  width: clamp(150px, 40vw, 200px);
+  aspect-ratio: 1 / 1;
+  margin: 0 auto clamp(16px, 4vw, 24px);
+  border-radius: var(--radius-gif);
+  overflow: hidden;
+  background: var(--color-card-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-gif {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ============================================================
+   TEXT
+   ============================================================ */
+.main-message {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(1.35rem, 4.6vw, 1.85rem);
+  line-height: 1.35;
+  margin: 0 0 6px;
+  color: var(--color-text);
+  transition: opacity 0.25s ease;
+}
+
+.sub-message {
+  font-family: var(--font-body);
+  font-size: clamp(0.95rem, 3.4vw, 1.05rem);
+  color: var(--color-text-soft);
+  margin: 0 0 22px;
+  line-height: 1.7;
+}
+
+.sub-message[hidden] {
+  display: none;
+}
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+.button-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-buttons);
+  margin-top: 26px;
+  flex-wrap: nowrap;
+}
+
+.btn {
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  border-radius: var(--radius-btn);
+  font-weight: 600;
+  font-size: clamp(0.95rem, 3.6vw, 1.05rem);
+  padding: 14px 26px;
+  min-height: 48px;
+  min-width: 96px;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
+}
+
+.btn:focus-visible {
+  outline: 3px solid var(--color-focus-ring);
+  outline-offset: 3px;
+}
+
+/* ປຸ່ມ "ດີກັນນ ❤️" — ตຕຳແໜ່ງຈະຢູ່ໃນເລເອົ້າປົກກະຕິສະເໝີ ບໍ່ຖືກຍ້າຍໄປຍ້າຍມາໃນ JS ແນ່ນອນ */
+.btn-yes {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: #fff;
+  box-shadow: var(--shadow-btn-yes);
+}
+
+.btn-yes:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 18px 30px -12px rgba(234, 109, 140, 0.6);
+}
+
+.btn-yes:active {
+  transform: translateY(0) scale(0.97);
+}
+
+/* ປຸ່ມ "ບໍ່..ຊັງ!" — ເລີ່ມຕົ້ນຈະຢູ່ໃນເລເອົ້າປົກກະຕິ ກ່ອນຈະຖືກປ່ຽນ position:fixed ດ້ວຍ JS
+   ຕອນທີ່ຜູ້ໃຊ້ພະຍາຍາມກົດຄັ້ງແລກ (ເບິ່ງ js/script.js ທີ່ຟັງຊັ້ນ armEscapeButton) */
+.btn-no {
+  background: var(--color-secondary-bg);
+  color: var(--color-secondary-text);
+  border: 2px solid var(--color-secondary-border);
+}
+
+.btn-no:hover {
+  transform: translateY(-1px);
+}
+
+.btn-no:active {
+  transform: translateY(0) scale(0.97);
+}
+
+/* ຄລາສນີ້ຖືກເຕີມດ້ວຍ JS ຕອນປຸ່ມ "ບໍ່..ຊັງ!" ປ່ຽນເປັນລອຍແບບອິດສະຫຼະຢູ່ໃນໜ້າເວັບ */
+.btn-no.is-armed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  /* ໝາຍເຫດ: ຕັ້ງໃຈບໍ່ໃຊ້ easing ແບບ "overshoot" (ເຊັ່ນ back-ease) ບ່ອນນີ້ ເພາະຈະເຮັດໃຫ້ປຸ່ມເຄື່ອນໄຫວ
+     ເຄື່ອນທີ່ກາຍຕຳແໜ່ງເປົ້າໝາຍໄປໃນຂະນະໜື່ງລະຫວ່າງອະນິເມຊັ້ນ ເຊິ່ງຈະເຮັດໃຫ້ກາຍຂອບ viewport ໄດ້
+     ໃນເຄື່ອງທີ່ຈໍນ້ອຍ ເຊັ່ນ: ໂທລະສັບ/ແທັບເລດ */
+  transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+/* ຊ່ອງວ່າງທີ່ແທນຕຳແໜ່ງເດີມຂອງປຸ່ມ "ບໍ່..ຊັງ!" ເພື່ອບໍ່ໃຫ້ປຸ່ມ "ດີກັນນ" ເຄື່ອນຕາມເລເອົ້າ */
+.btn-no-placeholder {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* ເອຟເຟກຕອນປຸ່ມ "ບໍ່..ຊັງ!" ແລ່ນໜີ ໃຫ້ຄວາມຮູ້ສຶກຂີ້ເລ່ນ — ໃຊ້ box-shadow ripple ແທນການໝຸນ/ຫຍໍ້ຂະຫຍາຍປຸ່ມເອງ
+   ແບບຕັ້ງໃຈໂດຍໃຊ້: CSS property ດ່ຽວໆ ແບບ `rotate` ຫຼື `scale` ເມື່ອໃຊ້ຮ່ວມກັບ `transform: translate()`
+   ທີ່ຕັ້ງຄ່າໄດນາມິກດ້ວຍ JavaScript ຈະໝຸນ/ຂະຫຍາຍຮອບຈຸດໝຸນເກົ່າກ່ອນເຄື່ອນເໜັງ (ບໍ່ແມ່ນຕຳແໜ່ງປັດຈຸບັນ)
+   ເຊິ່ງຈະເຮັດໃຫ້ປຸ່ມແລ່ນຫຼຸດອອກນອກຈໍໄດ້ ໂດຍສະເພາະຂອບຈໍທີ່ມີຂະໜາດນ້ອຍ ຈຶ່ງໄດ້ມາໃຊ້ box-shadow ເຊິ່ງບໍ່ມີການກະທົບ
+   ຕຳແໜ່ງ/ຂະໜາດຈິງຂອງປຸ່ມເລີຍ ຮອບຮອງປອດໄພ 100% */
+.btn-no.is-armed.is-wiggling {
+  animation: no-btn-pop 0.4s ease-out;
+}
+
+@keyframes no-btn-pop {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 143, 168, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(255, 143, 168, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 143, 168, 0);
+  }
+}
+
+/* ============================================================
+   HAPPY ENDING STATE
+   ============================================================ */
+.card.is-happy .button-row {
+  opacity: 0;
+  pointer-events: none;
+  height: 0;
+  margin: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.card.is-happy .gif-wrap {
+  animation: happy-pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes happy-pop {
+  0% {
+    transform: scale(0.85);
+  }
+  60% {
+    transform: scale(1.06);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.sub-message.is-visible {
+  display: block;
+  animation: fade-up 0.5s ease both;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================================
+   FLOATING HEARTS (Happy Ending confetti ແບບເບົາໆ)
+   ============================================================ */
+.hearts-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 20;
+}
+
+.floating-heart {
+  position: absolute;
+  bottom: -40px;
+  font-size: var(--heart-size, 20px);
+  opacity: 0.9;
+  animation: heart-rise var(--heart-duration, 3.2s) ease-in forwards;
+  will-change: transform, opacity;
+}
+
+@keyframes heart-rise {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.95;
+  }
+  100% {
+    transform: translate(var(--heart-drift, 20px), -110vh) rotate(var(--heart-rotate, 30deg));
+    opacity: 0;
+  }
+}
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    animation: none;
+  }
+  .btn-no.is-armed {
+    transition-duration: 0.01s;
+  }
+  .btn-no.is-armed.is-wiggling {
+    animation: none;
+  }
+  .card.is-happy .gif-wrap {
+    animation: none;
+  }
+  .floating-heart {
+    animation: none;
+    display: none;
+  }
+}
+
+/* ============================================================
+   SMALL SCREENS
+   ============================================================ */
+@media (max-width: 360px) {
+  .btn {
+    padding: 12px 20px;
+    min-width: 84px;
+  }
+}
